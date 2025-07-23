@@ -21,6 +21,12 @@
      margin: 50px;
     padding: 30px; 
 }
+
+
+.banner-left{
+    padding-left: 45px;
+    flex: 1;
+}
 .banner h2{
 font-size: 50px;
 font-weight: 700;
@@ -39,7 +45,12 @@ margin: 30px 0;
   border: none;
     background-color: rgb(221, 0, 0);
 }
-
+.banner-right{
+    flex: 1;
+}
+.banner-right img{
+ max-width: 100%;
+}
 
 /* upcoming matches */
 .upcoming-matches{
@@ -105,3 +116,33 @@ gap:41px;
 /* background-color: blue; */
 padding: 20px 0px 14px;
 }
+
+/* media quare for Tablet/Tab */
+
+@media screen and (max-width:992px) {
+  .upcoming-matches{
+    flex-direction: column;
+  } 
+  .upcoming-matches-left{
+    flex-direction:row;
+    width: 100%;
+background-color: transparent;
+
+}
+  .upcoming-matches-left>*{
+flex: 1;
+  }
+  .upcoming-matches-right{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .upcoming-matches-left .btn{
+border: 1px solid rgb(232, 232, 232);
+border-radius: 10px;
+
+  }
+  .banner h2{
+font-size: 40px;
+font-weight: 700;
+line-height:50px ;
+
+  }
